@@ -1,4 +1,7 @@
+import java.util.*;
+import java.util.Scanner;
 public class App {
+
     public static void main(String[] args) {
         /*System.out.println("White pawn one position: " + WhitePieces.getWhitepawnonePosition());
         System.out.println("White pawn two position: " + WhitePieces.getWhitepawntwoPosition());
@@ -8,6 +11,7 @@ public class App {
         System.out.println("White pawn six position: " + WhitePieces.getWhitepawnsixPosition());
         System.out.println("White pawn seven position: " + WhitePieces.getWhitepawnsevenPosition());
         System.out.println("White pawn eight position: " + WhitePieces.getWhitepawneightPosition());*/
-        GameSetup.MakeChessBoard.chessboard();
-        }
+        GameSetup.Chessboard();
+        GamePlay.Player_turn();
     }
+}

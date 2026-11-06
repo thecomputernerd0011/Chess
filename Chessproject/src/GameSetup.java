@@ -1,25 +1,18 @@
 public class GameSetup {
-    public static class MakeChessBoard {
-        static String[][] Chessboard = new String[8][8];
-        public static void chessboard() {
-            for (int row = 0; row < 8; row++) {
-            for (int col = 0; col < 8; col++) {
-                System.out.print("+---");
-            }
-            System.out.println("+");
+    public class ChessBoard {
+        private int[] xCoords = {};
+        private int[] yCoords = {};
+        char[][] graph = new char[8][8]; // 8 rows (y), 8 columns (x)
 
-            for (int col = 0; col < 8; col++) {
-                System.out.print("|   ");
+        {
+            for (int i = 0; i < xCoords.length; i++) {
+                int row = graph.length - 1 - yCoords[i]; // invert y for screen coords
+                int col = xCoords[i] + 1;
+                graph[row][col] = 'X';
             }
-            System.out.println("|");
-            }
-            for (int col = 0; col < 8; col++) {
-                System.out.print("+---");
-            }
-            System.out.println("+");
-            
-            };
         }
+    }
+
 
 
 
