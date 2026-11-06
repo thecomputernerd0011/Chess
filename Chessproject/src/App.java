@@ -11,7 +11,8 @@ public class App {
         System.out.println("White pawn six position: " + WhitePieces.getWhitepawnsixPosition());
         System.out.println("White pawn seven position: " + WhitePieces.getWhitepawnsevenPosition());
         System.out.println("White pawn eight position: " + WhitePieces.getWhitepawneightPosition());*/
-        GameSetup.Chessboard();
+        ChessBoard chessBoard = new ChessBoard();
+        chessBoard.printBoard();
         GamePlay.Player_turn();
     }
 }
