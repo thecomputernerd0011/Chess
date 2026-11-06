@@ -8,4 +8,20 @@ public class ChessPiece {
         this.team = team;
         this.type = type;
     }
+
+    public int[] getPosition() {
+        return position;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public PieceType getType() {
+        return type;
+    }
+
+    public void setPosition(int[] position) {
+        this.position = position;
+    }
 }
