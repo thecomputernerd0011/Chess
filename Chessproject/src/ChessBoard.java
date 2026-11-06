@@ -5,6 +5,31 @@ public class ChessBoard {
         resetBoard();
     }
 
+    public void printBoard() {
+        // Top line of board
+        System.out.println("+----+----+----+----+----+----+----+----+");
+
+        // For every row
+        for (int i = 7; i >= 0; i--) {
+            System.out.println("|    |    |    |    |    |    |    |    |");
+            // For every column
+            for (int j = 0; j < board[i].length; j++) {
+                ChessPiece piece = board[i][j];
+                if (piece != null) {
+                    System.out.print("| " + piece.getTeam().getSymbol() + piece.getType().getSymbol() + " ");
+                } else {
+                    System.out.print("|    ");
+                }
+            }
+            // Add last pipe of the line and move to next line
+            System.out.println("|");
+
+            // Finish off row bottom
+            System.out.println("|    |    |    |    |    |    |    |    |");
+            System.out.println("+----+----+----+----+----+----+----+----+");
+        }
+    }
+
     public void resetBoard() {
         // Make the chess board a fresh game
         board = new ChessPiece[][]{
